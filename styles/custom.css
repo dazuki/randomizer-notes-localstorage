@@ -2,6 +2,10 @@
   --accent: #dddddd;
 }
 
+body {
+  background: url('../img/micro_carbon.png');
+}
+
 body header {
   padding: 0px;
   background: none;
@@ -19,8 +23,8 @@ body footer {
 
 header h4 {
   font-size: 28px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 input[type='button'] {
@@ -44,6 +48,25 @@ details {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-summary img {
+.oot-icon {
   float: right;
+  height: 32px;
+  width: 32px;
+  background: url('../img/sprites.png');
+}
+
+.icon-hookshot {
+  background-position: 64px -32px;
+}
+
+.icon-wallet {
+  background-position: 128px 64px;
+}
+
+.icon-l-arrow {
+  background-position: 0px -96px;
+}
+
+.icon-foolish {
+  background-position: -64px -192px;
 }

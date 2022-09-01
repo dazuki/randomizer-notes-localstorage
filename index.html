@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
     <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css" /> -->
     <link rel="stylesheet" href="./styles/custom.css" />
-    <script src="./js/store2.js"></script>
+    <!-- <script src="./js/store2.js"></script> -->
+    <script src="./js/store2.min.js"></script>
     <script src="./js/main.js"></script>
   </head>
   <body>
     <header>
-      <h4>RANDOMIZER NOTES</h4>
+      <h4>Randomizer Notes</h4>
     </header>
 
     <main>
       <div id="container">
         <details>
           <summary>
-            Item Location <img src="./img/OoT_Lens_of_Truth_Icon.png" alt="" />
+            Item Location
+            <div class="oot-icon icon-hookshot"></div>
           </summary>
           <div id="item">
             <textarea
@@ -29,14 +31,15 @@
               id="item-notes"
               rows="2"
               spellcheck="false"
-              placeholder="type things here..."
+              placeholder="..."
             ></textarea>
           </div>
         </details>
 
         <details>
           <summary>
-            Item Shop<img src="./img/OoT_Giants_Wallet_Icon.png" alt="" />
+            Item Shop
+            <div class="oot-icon icon-wallet"></div>
           </summary>
           <div id="shop">
             <textarea
@@ -45,14 +48,15 @@
               id="shop-notes"
               rows="2"
               spellcheck="false"
-              placeholder="type things here..."
+              placeholder="..."
             ></textarea>
           </div>
         </details>
 
         <details>
           <summary>
-            Way of the Hero<img src="./img/OoT_Light_Arrow_Icon.png" alt="" />
+            Way of the Hero
+            <div class="oot-icon icon-l-arrow"></div>
           </summary>
           <div id="woth">
             <textarea
@@ -61,14 +65,15 @@
               id="woth-notes"
               rows="2"
               spellcheck="false"
-              placeholder="type things here..."
+              placeholder="..."
             ></textarea>
           </div>
         </details>
 
         <details>
           <summary>
-            Foolish Choice<img src="./img/OoT_Spooky_Mask_Icon.png" alt="" />
+            Foolish Choice
+            <div class="oot-icon icon-foolish"></div>
           </summary>
           <div id="foolish">
             <textarea
@@ -77,15 +82,13 @@
               id="foolish-notes"
               rows="2"
               spellcheck="false"
-              placeholder="type things here..."
+              placeholder="..."
             ></textarea>
           </div>
         </details>
 
         <details open>
-          <summary>
-            Notes<img src="./img/OoT_Gerudo_Token_Icon.png" alt="" />
-          </summary>
+          <summary>Notes</summary>
           <div id="other">
             <textarea
               data-autoresize
@@ -98,7 +101,7 @@
           </div>
         </details>
 
-        <input type="button" name="resetBtn" id="resetBtn" value="Reset" />
+        <input type="button" name="resetBtn" id="resetBtn" value="Reset All" />
       </div>
     </main>
 
