@@ -27,6 +27,27 @@ header h4 {
   margin-bottom: 10px;
 }
 
+.box {
+  background-color: var(--accent-bg);
+  border: 1px solid var(--border);
+  text-align: left;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box-flex {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--accent-bg);
+  border: 1px solid var(--border);
+  text-align: left;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
 input[type='button'] {
   font-weight: bold;
   border-radius: 0;

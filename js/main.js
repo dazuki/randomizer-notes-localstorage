@@ -6,6 +6,7 @@ function initMain() {
     if (store.size() > 0) {
       if (store.has(element.name)) {
         element.value = store(element.name);
+        element.closest('details').open = true;
         console.log('restored(' + element.name + '): ' + store(element.name));
       }
     }
@@ -27,12 +28,38 @@ function initMain() {
     });
   });
 
+  document.querySelectorAll('input[type=checkbox]').forEach(function (element) {
+    element.addEventListener('change', function (event) {
+      //console.log(event.target.name + ': ' + event.target.checked);
+      if (event.target.checked) {
+        store(event.target.name, event.target.value);
+        console.log(event.target.name + ': ' + store(event.target.name));
+      } else {
+        store.remove(event.target.name);
+        console.log(event.target.name + ': unchecked');
+      }
+    });
+
+    if (store.has(element.name)) {
+      element.checked = true;
+      console.log('restored(' + element.name + '): ' + store(element.name));
+    }
+  });
+
   document.getElementById('resetBtn').addEventListener('click', function () {
     document.querySelectorAll('textarea').forEach(function (element) {
       store.remove(element.name);
+      if (element.name != 'other-notes') {
+        element.closest('details').open = false;
+      }
       element.value = '';
     });
+
+    document.querySelectorAll('input[type=checkbox]').forEach(function (element) {
+      store.remove(element.name);
+      element.checked = false;
+    });
+
+    console.log('cleared localstorage');
   });
 }
-
-console.log(store());
